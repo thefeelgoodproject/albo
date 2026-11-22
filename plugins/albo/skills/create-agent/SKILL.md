@@ -1,6 +1,6 @@
 ---
 name: create-agent
-description: Create an agent in the Albo brain the standard way. An agent is one persona with one responsibility and a checklist of jobs, kept on a brain page that its scheduler (a Claude routine, cron or webhook) reads and follows. Use when the user wants to create or set up an agent, make a bot that does something on a schedule, automate a task with an agent, give someone their own copy of an existing agent (a remix), or connect an existing routine to Albo. Use when the Albo brain tools (agent_standard, connect_agent) are connected.
+description: Create an agent in the Albo brain the standard way. An agent is one persona with one responsibility and a checklist of jobs, kept on a brain page that its scheduler (a Claude routine, cron or webhook) reads and follows. Every agent on Claude is a cloud routine, never a desktop scheduled task. Use when the user wants to create or set up an agent, move an agent from a desktop scheduled task to the cloud, make a bot that does something on a schedule, automate a task with an agent, give someone their own copy of an existing agent (a remix), or connect an existing routine to Albo. Use when the Albo brain tools (agent_standard, connect_agent) are connected.
 metadata:
   triggers:
     - '"create an agent", "set up an agent", "make a bot that …", "automate X with an agent"'
@@ -49,11 +49,16 @@ account and stop.
    `webhook`, `own-bot` or `other`), `reads`, `tags`, and `source_id` for a team
    brain. Add `remix_of` for a copy. Keep the one line it returns for the next
    step.
-5. **Set up the scheduler.** On Claude, create a routine (a scheduled task at
-   claude.ai/code/routines) on the agreed schedule, with the Albo connector
-   attached and its prompt set to exactly the one line `connect_agent`
-   returned, nothing more. On another runner, give it the same line. Everything
-   else the agent needs lives on its page.
+5. **Run it as a cloud routine.** On Claude, every agent is a **cloud
+   routine** at claude.ai/code/routines on the owner's account, never a desktop
+   scheduled task: only a cloud routine has the API trigger that wake on answer
+   needs, and it keeps running when the owner's computer is off. Create it on
+   the agreed schedule, with the Albo connector attached and its prompt set to
+   exactly the one line `connect_agent` returned, nothing more. If the agent
+   already runs as a desktop scheduled task, move it: create the cloud routine,
+   then switch the desktop task off so it never runs twice. On another runner
+   (Codex, ChatGPT, your own cron), give it the same line; answers then wait
+   for its next run. Everything else the agent needs lives on its page.
 6. **Turn on wake on answer.** So an answer in the Agent Inbox starts a run
    straight away instead of waiting for the next scheduled one, walk the user
    through it:
