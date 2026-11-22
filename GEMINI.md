@@ -22,4 +22,4 @@ matters unless the user asks, and never to a team brain.
 
 Detailed workflows are available as the bundled `find`, `save`, `organize`,
 `plan`, and `recommend` skills, and the brain skills `brain`, `remember`,
-`team-skills`, `tidy`, and `think`.
+`team-skills`, `tidy`, `think`, and `create-agent`.

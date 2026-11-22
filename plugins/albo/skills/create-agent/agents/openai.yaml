@@ -1,0 +1,13 @@
+interface:
+  display_name: "Create Albo agent"
+  short_description: "Set up an agent the Albo way, or remix one"
+  default_prompt: "Use $create-agent to set up an agent in my Albo brain."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "albo"
+      description: "Albo personal library and brain"
+      transport: "streamable_http"
+      url: "https://mcp.albo.inc/mcp"
+policy:
+  allow_implicit_invocation: true

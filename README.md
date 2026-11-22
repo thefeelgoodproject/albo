@@ -24,7 +24,7 @@ Restart Gemini CLI, then authenticate the bundled MCP server:
 
 Complete the browser sign-in and run `/mcp list` to verify the connection. The
 extension also includes `find`, `save`, `organize`, `plan` and `recommend` library skills,
-plus `brain`, `remember`, `team-skills`, `tidy` and `think` brain skills, which Gemini
+plus `brain`, `remember`, `team-skills`, `tidy`, `think` and `create-agent` brain skills, which Gemini
 activates when they match your request.
 
 ## Claude Code
@@ -118,6 +118,7 @@ These need the Albo brain tools, which the connector offers to members of an Alb
 | Team skills | `team-skills` skill | automatic | A task matches one of your team's skills: `list_skills`, then `get_skill`, then follows its steps |
 | Tidy | `tidy` skill | `/albo:tidy` | "Tidy my brain" or a scheduled run: previews orphans, contradictions, stale pages, duplicates and broken links read-only, then fixes only what you approve |
 | Think | `think` skill | `/albo:think` | Deeper "why", "how has it changed", "what are we missing" questions: `synthesize` or `think` for a cited answer across many pages |
+| Create agent | `create-agent` skill | `/albo:create-agent` | "Create an agent", "make a bot that…", "give Eileen her own copy of my campaign manager", "connect this routine to Albo": follows the agent standard (`agent_standard`), creates or remixes the agent with `connect_agent`, sets up its routine and wake on answer, and runs it once |
 
 ## Fallback zip
 

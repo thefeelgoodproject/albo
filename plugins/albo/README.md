@@ -31,8 +31,8 @@ the [installation guide](https://mcp.albo.inc/install.md).
 - Tidy my Albo brain.
 
 The bundled library skills are `recommend`, `find`, `save`, `organize`, and
-`plan`. The brain skills are `brain`, `remember`, `team-skills`, `tidy`, and
-`think`; they run only when the connector offers brain tools. They use the declared
+`plan`. The brain skills are `brain`, `remember`, `team-skills`, `tidy`,
+`think`, and `create-agent`; they run only when the connector offers brain tools. They use the declared
 Albo connector; the plugin includes no local executable hooks or launchers.
 It cannot make reservations or delete your entire library.
 
