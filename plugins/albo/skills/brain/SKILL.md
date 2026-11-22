@@ -58,3 +58,4 @@ Brain tools appear only for people in an Albo team. If `search`, `query` and
   library, not the brain. Use the `find` skill for those.
 - When something lasting is decided or learned, the `remember` skill saves it.
   For deep questions across many pages, see the `think` skill.
+- To create, remix or connect an agent, use the `create-agent` skill.
